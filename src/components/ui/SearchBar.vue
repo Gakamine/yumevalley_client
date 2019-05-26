@@ -36,7 +36,7 @@ export default {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  font-family: "Montserrat";
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #333;
   padding: 0 20px;
