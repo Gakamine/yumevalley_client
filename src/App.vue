@@ -3,18 +3,7 @@
     <NavBar/>
     <div class="layout">
       <SideMenu/>
-      <div>
-        <HomeSection title="Popular">
-          <MangaItem/>
-          <MangaItem/>
-          <MangaItem/>
-        </HomeSection>
-        <HomeSection title="Recommended">
-          <MangaItem/>
-          <MangaItem/>
-          <MangaItem/>
-        </HomeSection>
-      </div>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -22,16 +11,11 @@
 <script>
 import NavBar from "./components/ui/NavBar.vue";
 import SideMenu from "./components/ui/SideMenu.vue";
-import HomeSection from "./components/ui/HomeSection.vue";
-import MangaItem from "./components/ui/MangaItem.vue";
 
 export default {
-  name: "app",
   components: {
     NavBar,
-    SideMenu,
-    HomeSection,
-    MangaItem
+    SideMenu
   }
 };
 </script>
