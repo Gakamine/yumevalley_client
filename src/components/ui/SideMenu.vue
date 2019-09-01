@@ -1,20 +1,30 @@
 <template>
   <div class="SideMenu">
-    <SideMenuItem name="Home">
-      <HomeIcon/>
-    </SideMenuItem>
-    <SideMenuItem name="Discover">
-      <CompassIcon/>
-    </SideMenuItem>
-    <SideMenuItem name="Following">
-      <ListIcon/>
-    </SideMenuItem>
-    <SideMenuItem name="Translate">
-      <FlagIcon/>
-    </SideMenuItem>
-    <SideMenuItem name="Profile">
-      <UserIcon/>
-    </SideMenuItem>
+    <router-link to="./">
+      <SideMenuItem name="Home">
+        <HomeIcon/>
+      </SideMenuItem>
+    </router-link>
+    <router-link to="./404">
+      <SideMenuItem name="Discover">
+        <CompassIcon/>
+      </SideMenuItem>
+    </router-link>
+    <router-link to="./404">
+      <SideMenuItem name="Following">
+        <ListIcon/>
+      </SideMenuItem>
+    </router-link>
+    <router-link to="./404">
+      <SideMenuItem name="Translate">
+        <FlagIcon/>
+      </SideMenuItem>
+    </router-link>
+    <router-link>
+      <SideMenuItem name="Profile">
+        <UserIcon/>
+      </SideMenuItem>
+    </router-link>
   </div>
 </template>
 
@@ -45,5 +55,10 @@ export default {
   display: flex;
   flex-direction: column;
   width: 230px;
+}
+
+.SideMenu a {
+  text-decoration: none;
+  color: black;
 }
 </style>
