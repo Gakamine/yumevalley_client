@@ -1,0 +1,36 @@
+.SideMenuItem:hover {
+    background-color: #1a1c1d !important;;
+}
+
+.SideMenuItem {
+  color: #e8e6e3; 
+}
+
+body {
+  background-color: #181a1b;
+  color: #e8e6e3;
+}
+
+.router-link-active .SideMenuItem {
+    background-color:  #1a1c1d;
+}
+
+nav {
+  background-color: #181a1b;
+}
+
+.SearchBar input {
+  background: #1a1c1d !important;;
+}
+
+.NavBar {
+  border-color: #363636;
+}
+
+.MangaItem__cover {
+  background-image: linear-gradient(-128deg, #400131 0%, #2c2e31 100%) !important;;
+}
+
+.MangaItem__name, .MangaItem__details {
+  color: #e8e6e3 !important;;
+}
