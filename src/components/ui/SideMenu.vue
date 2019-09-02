@@ -1,26 +1,26 @@
 <template>
   <div class="SideMenu">
-    <router-link to="./">
+    <router-link to="/" exact>
       <SideMenuItem name="Home">
         <HomeIcon/>
       </SideMenuItem>
     </router-link>
-    <router-link to="./404">
+    <router-link to="/discover">
       <SideMenuItem name="Discover">
         <CompassIcon/>
       </SideMenuItem>
     </router-link>
-    <router-link to="./404">
+    <router-link to="/following">
       <SideMenuItem name="Following">
         <ListIcon/>
       </SideMenuItem>
     </router-link>
-    <router-link to="./404">
+    <router-link to="/translate">
       <SideMenuItem name="Translate">
         <FlagIcon/>
       </SideMenuItem>
     </router-link>
-    <router-link>
+    <router-link to="/profile">
       <SideMenuItem name="Profile">
         <UserIcon/>
       </SideMenuItem>
@@ -60,5 +60,9 @@ export default {
 .SideMenu a {
   text-decoration: none;
   color: black;
+}
+
+.router-link-active .SideMenuItem {
+    background-color: #f9f9f9;
 }
 </style>
