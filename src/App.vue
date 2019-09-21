@@ -51,5 +51,4 @@ a {
     grid-gap: 60px;
   }
 }
-
 </style>
