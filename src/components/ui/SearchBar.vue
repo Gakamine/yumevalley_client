@@ -24,6 +24,7 @@ export default {
 .SearchBar {
   height: 38px;
   width: 400px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   position: relative;

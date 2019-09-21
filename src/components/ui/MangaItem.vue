@@ -23,12 +23,34 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (min-width: 1024px) {
+  .MangaItem__cover {
+    height: 265px;
+    width: 185px;
+  }
+  .MangaItem__details {
+    font-size: 14px;
+  }
+  .MangaItem {
+    margin-right: 42px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .MangaItem__cover {
+    height: 216px;
+    width: 140px;
+  }
+  .MangaItem__details {
+    font-size: 10px;
+  }
+  .MangaItem {
+    margin-right: 20px;
+  }
+}
 .MangaItem {
-  margin-right: 42px;
+  margin-bottom: 20px;
 }
 .MangaItem__cover {
-  height: 265px;
-  width: 185px;
   background-image: linear-gradient(-128deg, #b9e4fb 0%, #ffe7f9 100%);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.03);
   border-radius: 8px;
@@ -45,7 +67,6 @@ export default {
 }
 .MangaItem__name {
   margin-top: 15px;
-  font-size: 18px;
   color: #444;
 }
 .MangaItem__details {
@@ -53,7 +74,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 14px;
   color: #666666;
 }
 .MangaItem__views {

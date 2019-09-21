@@ -1,5 +1,7 @@
 <template>
-  <div class="Logo">*logo here*</div>
+  <div class="Logo">
+    <img src="@/assets/logo.png" alt="Logo">
+  </div>
 </template>
 
 <script>
@@ -8,7 +10,11 @@ export default {};
 
 <style scoped>
 .Logo {
-  position: absolute;
-  left: 50px;
+  height: 64px;
+}
+
+.Logo img {
+  padding: 5px;
+  height: 64px;
 }
 </style>
