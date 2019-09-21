@@ -11,10 +11,12 @@ export default {};
 <style scoped>
 .Logo {
   height: 64px;
+  align-items: center;
+  display: flex;
 }
 
 .Logo img {
   padding: 5px;
-  height: 64px;
+  width: 64px;
 }
 </style>
