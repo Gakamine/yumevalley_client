@@ -13,6 +13,9 @@ const router = new VueRouter({
   }, {
     path: '*',
     component: require('./components/pages/404.vue').default
+  }, {
+    path: '/media/:slug',
+    component: require('./components/pages/media.vue').default
   }]
 })
 

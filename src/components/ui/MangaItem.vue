@@ -1,15 +1,17 @@
 <template>
-  <div class="MangaItem">
-    <div class="MangaItem__cover"></div>
-    <div class="MangaItem__name">Some name, vol 3</div>
-    <div class="MangaItem__details">
-      <div class="MangaItem__author">Authorname</div>
-      <div class="MangaItem__views">
-        12.4K
-        <EyeIcon/>
+  <router-link to="/media/1">
+    <div class="MangaItem">
+      <div class="MangaItem__cover"></div>
+      <div class="MangaItem__name">Some name, vol 3</div>
+      <div class="MangaItem__details">
+        <div class="MangaItem__author">Authorname</div>
+        <div class="MangaItem__views">
+          12.4K
+          <EyeIcon/>
+        </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
