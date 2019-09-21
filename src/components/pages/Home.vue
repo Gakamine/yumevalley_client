@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="list-section">
         <HomeSection title="Popular">
           <MangaItem/>
           <MangaItem/>

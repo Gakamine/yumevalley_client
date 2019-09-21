@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style>
+* {
+  outline: none;
+}
 body {
   color: #333;
   margin: 0;
@@ -30,9 +33,11 @@ body {
   margin: 0;
 }
 .layout {
-  margin: 28px 20px;
-  display: grid;
+  margin: 70px 20px 0px 20px;  display: grid;
   grid-template-columns: 230px 1fr 230px;
   grid-gap: 60px;
+}
+a {
+  text-decoration: none !important;
 }
 </style>
