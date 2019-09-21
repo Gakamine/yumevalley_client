@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import 'bootstrap';
 import VueRouter from 'vue-router'
+import 'tachyons'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
