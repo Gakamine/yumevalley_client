@@ -21,6 +21,11 @@ export default {
 </script>
 
 <style>
+a {
+  outline: none;
+  text-decoration: none;
+}
+
 body {
   color: #333;
   margin: 0;
