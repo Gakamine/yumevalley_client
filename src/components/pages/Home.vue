@@ -24,3 +24,11 @@ export default {
     }
 }
 </script>
+<style>
+@media screen and (max-width: 1024px) {
+  .list-section {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+</style>
