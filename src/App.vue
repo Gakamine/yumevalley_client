@@ -3,7 +3,9 @@
     <NavBar/>
     <div class="layout">
       <SideMenu/>
-      <router-view></router-view>
+      <div class="router_view">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -42,12 +44,15 @@ a {
     grid-template-columns: 230px 1fr 230px;
     grid-gap: 60px;
   }
+  .router_view {
+    padding: 0px 20px 0px 20px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .layout {
     margin: 70px 20px 0px 20px;
     display: grid;
-    grid-template-columns: 230px 1fr 230px;
+    grid-template-columns: 230px 1fr;
     grid-gap: 60px;
   }
 }

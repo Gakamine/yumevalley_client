@@ -19,9 +19,18 @@ h2 {
   font-weight: normal;
 }
 .HomeSection {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
-.HomeSection__content {
-  display: flex;
+@media screen and (min-width: 1024px) {
+  .HomeSection__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .HomeSection__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>
