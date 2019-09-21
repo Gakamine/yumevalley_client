@@ -30,7 +30,7 @@ h2 {
 @media screen and (max-width: 1024px) {
   .HomeSection__content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   }
 }
 </style>
