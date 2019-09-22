@@ -37,7 +37,6 @@ body {
 a {
   text-decoration: none !important;
 }
-
 @media screen and (max-width: 1024px) {
   .layout {
     display: block;
