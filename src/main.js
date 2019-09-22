@@ -1,7 +1,11 @@
 import Vue from 'vue'
-import 'bootstrap';
+import 'bootstrap'
 import VueRouter from 'vue-router'
 import 'tachyons'
+import { ApolloClient } from 'apollo-client'
+import VueApollo from 'vue-apollo'
+import { HttpLink } from 'apollo-link-http'
+import { InMemoryCache } from 'apollo-cache-inmemory'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -20,8 +24,29 @@ const router = new VueRouter({
   }]
 })
 
+const httpLink = new HttpLink({
+  uri: '/graphql',
+  fetchOptions: { method: "POST" },
+})
+
+const apolloClient = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+  connectToDevTools: true
+})
+
+Vue.use(VueApollo)
+
+const apolloProvider = new VueApollo({
+  defaultClient: apolloClient,
+  defaultOptions: {
+    $loadingKey: 'loading'
+  }
+})
+
 new Vue({
   el: '#app',
+  provide: apolloProvider.provide(),
   router,
   render: h => h(require('./App.vue').default),
 })

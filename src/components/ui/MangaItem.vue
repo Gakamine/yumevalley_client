@@ -1,10 +1,10 @@
 <template>
-  <router-link to="/media/1">
+  <router-link :to="'media/' + Creation.id">
     <div class="MangaItem">
       <div class="MangaItem__cover"></div>
-      <div class="MangaItem__name">Some name, vol 3</div>
+      <div class="MangaItem__name">{{ Creation.title }}</div>
       <div class="MangaItem__details">
-        <div class="MangaItem__author">Authorname</div>
+        <div class="MangaItem__author">{{ Creation.author }}</div>
         <div class="MangaItem__views">
           12.4K
           <EyeIcon/>
@@ -18,7 +18,8 @@
 import { EyeIcon } from "vue-feather-icons";
 
 export default {
-  components: { EyeIcon }
+  components: { EyeIcon },
+  props: ['Creation']
 };
 </script>
 
