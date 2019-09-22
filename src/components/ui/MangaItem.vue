@@ -43,9 +43,9 @@ export default {
 @media screen and (max-width: 1024px) {
   .MangaItem__cover {
     height: 216px;
-    width: 100%;
-    margin-left: auto;
+    width: 140px;
     margin-right: auto;
+    margin-left: auto;
   }
   .MangaItem__details {
     font-size: 10px;
@@ -65,8 +65,6 @@ export default {
   cursor: pointer;
   transition-duration: 0.15s;
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
 }
 .MangaItem__cover:hover {
   transform: scale(1.01) translateY(-1px);
