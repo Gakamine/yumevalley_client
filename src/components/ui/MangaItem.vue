@@ -43,9 +43,9 @@ export default {
 @media screen and (max-width: 1024px) {
   .MangaItem__cover {
     height: 216px;
-    width: 100%;
-    margin-left: auto;
+    width: 140px;
     margin-right: auto;
+    margin-left: auto;
   }
   .MangaItem__details {
     font-size: 10px;
