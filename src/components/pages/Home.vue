@@ -1,14 +1,12 @@
 <template>
     <div class="list-section">
         <HomeSection title="Popular">
-          <div class="lds-ring" v-if="loading"><div></div><div></div><div></div><div></div></div>
           <MangaItem v-for="Creation in creation"
               :key="Creation.id"
               :creation_data="Creation">
           </MangaItem>
         </HomeSection>
         <HomeSection title="Recommended">
-          <div class="lds-ring" v-if="loading"><div></div><div></div><div></div><div></div></div>
           <MangaItem v-for="Creation in creation"
               :key="Creation.id"
               :creation_data="Creation">

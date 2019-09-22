@@ -56,6 +56,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 230px;
+    position: fixed;
   }
 }
 

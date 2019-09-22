@@ -71,6 +71,11 @@ export default {
   transform: none;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.03);
 }
+.MangaItem__cover img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .MangaItem__name {
   margin-top: 15px;
   color: #444;
