@@ -25,7 +25,7 @@ const router = new VueRouter({
 })
 
 const httpLink = new HttpLink({
-  uri: '/graphql',
+  uri: 'https://yumevalley-api.herokuapp.com/graphql',
   fetchOptions: { method: "POST" },
 })
 
@@ -46,7 +46,7 @@ const apolloProvider = new VueApollo({
 
 new Vue({
   el: '#app',
-  provide: apolloProvider.provide(),
+  apolloProvider,
   router,
   render: h => h(require('./App.vue').default),
 })

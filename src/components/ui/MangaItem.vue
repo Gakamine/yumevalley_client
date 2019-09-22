@@ -1,17 +1,21 @@
 <template>
-  <router-link :to="'media/' + Creation.id">
     <div class="MangaItem">
-      <div class="MangaItem__cover"></div>
-      <div class="MangaItem__name">{{ Creation.title }}</div>
+      <router-link :to="'media/' + creation_data.id">
+        <div class="MangaItem__cover">
+          <img :src="creation_data.coverUrl"/>
+        </div>
+        <div class="MangaItem__name">{{ creation_data.title }}</div>
+      </router-link>
       <div class="MangaItem__details">
-        <div class="MangaItem__author">{{ Creation.author }}</div>
+        <router-link :to="'/user/'+ creation_data.user.username">
+          <div class="MangaItem__author">{{ creation_data.user.username }}</div>
+        </router-link>
         <div class="MangaItem__views">
           12.4K
           <EyeIcon/>
         </div>
       </div>
     </div>
-  </router-link>
 </template>
 
 <script>
@@ -19,7 +23,7 @@ import { EyeIcon } from "vue-feather-icons";
 
 export default {
   components: { EyeIcon },
-  props: ['Creation']
+  props: ['creation_data']
 };
 </script>
 
@@ -57,6 +61,7 @@ export default {
   border-radius: 8px;
   cursor: pointer;
   transition-duration: 0.15s;
+  overflow: hidden;
 }
 .MangaItem__cover:hover {
   transform: scale(1.01) translateY(-1px);
@@ -85,5 +90,9 @@ export default {
   margin-left: 6px;
   height: 16px;
   width: 16px;
+}
+.MangaItem__author {
+  text-decoration: none;
+  color: #444;
 }
 </style>

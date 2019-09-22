@@ -20,7 +20,7 @@
         <FlagIcon/>
       </SideMenuItem>
     </router-link>
-    <router-link to="/profile">
+    <router-link to="/user">
       <SideMenuItem name="Profile">
         <UserIcon/>
       </SideMenuItem>
