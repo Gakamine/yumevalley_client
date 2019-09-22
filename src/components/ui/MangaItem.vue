@@ -62,6 +62,8 @@ export default {
   cursor: pointer;
   transition-duration: 0.15s;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 .MangaItem__cover:hover {
   transform: scale(1.01) translateY(-1px);
