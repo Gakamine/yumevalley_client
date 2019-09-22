@@ -1,7 +1,7 @@
 <template>
   <div class="SearchBar">
     <input class="SearchBar__input" type="text" v-model="query">
-    <div class="SearchBar__placeholder" v-if="query.length === 0">
+    <div class="SearchBar__placeholder" v-if="query.length == 0">
       <SearchIcon/>Search
     </div>
   </div>
