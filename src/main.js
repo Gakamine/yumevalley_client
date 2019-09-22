@@ -46,7 +46,7 @@ const apolloProvider = new VueApollo({
 
 new Vue({
   el: '#app',
-  provide: apolloProvider.provide(),
+  apolloProvider,
   router,
   render: h => h(require('./App.vue').default),
 })

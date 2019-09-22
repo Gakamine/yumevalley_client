@@ -1,16 +1,18 @@
 <template>
     <div class="list-section">
         <HomeSection title="Popular">
-          <h4 v-if="loading">Loading...</h4>
-          <MangaItem v-for="Creation in AllCreations"
+          <div class="lds-ring" v-if="loading"><div></div><div></div><div></div><div></div></div>
+          <MangaItem v-for="Creation in creation"
               :key="Creation.id"
-              :creation="Creation">
+              :creation_data="Creation">
           </MangaItem>
         </HomeSection>
         <HomeSection title="Recommended">
-          <MangaItem/>
-          <MangaItem/>
-          <MangaItem/>
+          <div class="lds-ring" v-if="loading"><div></div><div></div><div></div><div></div></div>
+          <MangaItem v-for="Creation in creation"
+              :key="Creation.id"
+              :creation_data="Creation">
+          </MangaItem>
         </HomeSection>
       </div>
 </template>
@@ -27,14 +29,15 @@ export default {
   },
   data () {
     return {
-      AllCreations: [],
+      creation: [],
       loading: 0
     }
   },
   apollo: {
-    AllCreations: {
+    creation: {
       query: ALL_CREATIONS_QUERY
     }
+
   }
 }
 </script>
@@ -45,8 +48,6 @@ export default {
     overflow: hidden;
   }
 }
-</script>
-<style>
 @media screen and (max-width: 1024px) {
   .list-section {
     width: 100%;
