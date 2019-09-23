@@ -1,19 +1,28 @@
 <template>
   <nav class="NavBar">
-    <logo></logo>
+    <div class="nav-items">
+      <router-link to="./">
+        <logo></logo>
+      </router-link>
+    </div>
     <SearchBar/>
+    <div class="nav-items">
+      <Account/>
+    </div>
   </nav>
 </template>
 
 <script>
 import Logo from "./Logo";
+import Account from "./Account"
 import SearchBar from "./SearchBar";
 
 export default {
   name: "NavBar",
   components: {
     Logo,
-    SearchBar
+    SearchBar,
+    Account
   }
 };
 </script>
@@ -37,5 +46,16 @@ export default {
   background-color: white;
   top: 0;
   z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-items {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .nav-items {
+    width: 80px;
+  }
 }
 </style>
