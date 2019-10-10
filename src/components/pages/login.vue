@@ -1,26 +1,20 @@
 <template>
     <section>
         <h1>Login</h1>
-        <div class="register-container">
-            <TextInput placeholder="Enter your username"/>
-            <PasswordInput placeholder="Enter your password"/>
+        <form class="register-container">
+            <input class="input-text" type="email" placeholder="Enter your email" required/>
+            <input class="input-text" type="password" placeholder="Enter your password" required/>
+            <input class="input-btn" type="submit" value="Login"/>
             <router-link to="/auth/signup">
-                <Button placeholder="Register"/>
+                <p>...or register instead.</p>
             </router-link>
-        </div>
+        </form>
     </section>
 </template>
 <script>
-import TextInput from "../ui/forms/text_input.vue";
-import PasswordInput from "../ui/forms/password_input.vue";
-import Button from "../ui/forms/button.vue";
 
 export default {
-    components: {
-        TextInput,
-        PasswordInput,
-        Button
-    }
+
 }
 </script>
 <style>
@@ -33,5 +27,9 @@ export default {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+}
+
+p {
+    padding-left: 5px;
 }
 </style>

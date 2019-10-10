@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import 'bootstrap'
+import BootstrapVue from 'bootstrap-vue'
+import VueClosable from 'vue-closable'
 import VueRouter from 'vue-router'
 import 'tachyons'
 import { ApolloClient } from 'apollo-client'
@@ -9,6 +11,8 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
+Vue.use(BootstrapVue)
+Vue.use(VueClosable)
 
 const router = new VueRouter({
   mode: 'history',

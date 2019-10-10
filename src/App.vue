@@ -13,6 +13,8 @@
 <script>
 import NavBar from "./components/ui/NavBar.vue";
 import SideMenu from "./components/ui/SideMenu.vue";
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
   components: {
@@ -23,6 +25,8 @@ export default {
 </script>
 
 <style>
+@import './assets/css/forms.css';
+
 * {
   outline: none;
 }
@@ -36,6 +40,10 @@ body {
 }
 a {
   text-decoration: none !important;
+  color: #737373;
+}
+a:hover {
+    color: black;
 }
 @media screen and (max-width: 1024px) {
   .layout {
