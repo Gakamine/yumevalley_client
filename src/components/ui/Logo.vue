@@ -19,4 +19,5 @@ export default {};
   padding: 5px;
   width: 64px;
 }
+
 </style>

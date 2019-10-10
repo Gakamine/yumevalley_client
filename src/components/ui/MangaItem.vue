@@ -1,6 +1,6 @@
 <template>
     <div class="MangaItem">
-      <router-link :to="'media/' + creation_data.id">
+      <router-link :to="'media/' + creation_data.url">
         <div class="MangaItem__cover">
           <img :src="creation_data.coverUrl"/>
         </div>

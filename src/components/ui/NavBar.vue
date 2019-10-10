@@ -1,7 +1,7 @@
 <template>
   <nav class="NavBar">
     <div class="nav-items">
-      <router-link to="./">
+      <router-link to="/">
         <logo></logo>
       </router-link>
     </div>
@@ -55,7 +55,7 @@ export default {
 }
 @media screen and (max-width: 1024px) {
   .nav-items {
-    width: 80px;
+    width: 64px;
   }
 }
 </style>

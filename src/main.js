@@ -19,8 +19,17 @@ const router = new VueRouter({
     path: '*',
     component: require('./components/pages/404.vue').default
   }, {
-    path: '/media/:slug',
+    path: '/media/:url',
     component: require('./components/pages/media.vue').default
+  }, {
+    path: '/auth/signin',
+    component: require('./components/pages/login.vue').default
+  }, {
+    path: '/auth/signup',
+    component: require('./components/pages/register.vue').default
+  }, {
+    path: '/terms',
+    component: require('./components/pages/terms.vue').default
   }]
 })
 

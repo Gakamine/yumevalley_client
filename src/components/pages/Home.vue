@@ -45,7 +45,6 @@ export default {
     creation: {
       query: ALL_CREATIONS_QUERY
     }
-
   }
 }
 </script>

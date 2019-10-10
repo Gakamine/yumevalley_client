@@ -1,11 +1,17 @@
 <template>
     <section class="account-container">
-        <router-link class="account-btn" to="/authentification">
-            <div>Sign in | Sign up</div>
+        <router-link class="account-btn-mobile" to="/auth/signin">
             <LogInIcon/>
+        </router-link>
+        <router-link class="account-btn-pc" to="/auth/signin">
+            Sign in |
+        </router-link>
+        <router-link class="account-btn-pc" to="/auth/signup">
+             Sign up
         </router-link>
     </section>
 </template>
+
 <script>
 import { LogInIcon } from "vue-feather-icons";
 export default {
@@ -18,16 +24,16 @@ export default {
 .account-container {
     float: right;
 }
-.account-btn, .account-btn:hover {
+.account-btn-pc, .account-btn-pc:hover,.account-btn-mobile,.account-btn-mobile:hover {
     color: black;
 }
 @media screen and (max-width: 1024px) {
-    .account-btn > div {
+    .account-btn-pc {
         display: none;
     }
 }
 @media screen and (min-width: 1024px) {
-    .account-btn > .feather-log-in {
+    .account-btn-mobile {
         display: none;
     }
 }

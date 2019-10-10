@@ -6,6 +6,7 @@ export const ALL_CREATIONS_QUERY = gql`
         title
         creationDate
         coverUrl
+        url
         user {
           username
           id
