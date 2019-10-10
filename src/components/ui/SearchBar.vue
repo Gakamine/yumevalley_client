@@ -1,9 +1,7 @@
 <template>
   <div class="SearchBar">
-    <input class="SearchBar__input" type="text" v-model="query">
-    <div class="SearchBar__placeholder" v-if="query.length === 0">
-      <SearchIcon/>Search
-    </div>
+    <SearchIcon/>
+    <input class="SearchBar__input" type="text" v-model="query" placeholder="Search...">
   </div>
 </template>
 
@@ -24,13 +22,15 @@ export default {
 .SearchBar {
   height: 38px;
   width: 400px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   position: relative;
+  background: #f9f9f9;
+  border-radius: 6px;
 }
 .SearchBar__input {
   border: none;
-  padding: 5px 12px;
   border-radius: 6px;
   background: #f9f9f9;
   height: 100%;
@@ -39,19 +39,11 @@ export default {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #333;
-  padding: 0 20px;
+  padding-right: 15px;
 }
-.SearchBar__placeholder {
-  pointer-events: none;
-  position: absolute;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  color: #cecece;
-}
-.SearchBar__placeholder svg {
-  width: 16px;
-  height: 16px;
+.SearchBar svg {
   margin-right: 5px;
+  margin-left: 5px;
+  color: #cecece;
 }
 </style>

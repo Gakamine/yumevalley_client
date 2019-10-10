@@ -20,7 +20,7 @@
         <FlagIcon/>
       </SideMenuItem>
     </router-link>
-    <router-link to="/profile">
+    <router-link to="/user">
       <SideMenuItem name="Profile">
         <UserIcon/>
       </SideMenuItem>
@@ -51,10 +51,25 @@ export default {
 </script>
 
 <style>
-.SideMenu {
-  display: flex;
-  flex-direction: column;
-  width: 230px;
+@media screen and (min-width: 1024px) {
+  .SideMenu {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    position: fixed;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .SideMenu {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .SideMenuItem {
+    margin: 5px !important;
+  }
 }
 
 .SideMenu a {

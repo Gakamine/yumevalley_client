@@ -3,7 +3,9 @@
     <NavBar/>
     <div class="layout">
       <SideMenu/>
-      <router-view></router-view>
+      <div class="router_view">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -11,6 +13,8 @@
 <script>
 import NavBar from "./components/ui/NavBar.vue";
 import SideMenu from "./components/ui/SideMenu.vue";
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
   components: {
@@ -21,6 +25,11 @@ export default {
 </script>
 
 <style>
+@import './assets/css/forms.css';
+
+* {
+  outline: none;
+}
 body {
   color: #333;
   margin: 0;
@@ -29,10 +38,31 @@ body {
 #app {
   margin: 0;
 }
-.layout {
-  margin: 28px 20px;
-  display: grid;
-  grid-template-columns: 230px 1fr 230px;
-  grid-gap: 60px;
+a {
+  text-decoration: none !important;
+  color: #737373;
+}
+a:hover {
+    color: black;
+}
+@media screen and (max-width: 1024px) {
+  .layout {
+    display: block;
+    margin: 64px 0px 0px 0px;
+    grid-template-columns: 230px 1fr 230px;
+    grid-gap: 60px;
+  }
+  .router_view {
+    padding: 0px 20px 0px 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .layout {
+    margin: 70px 20px 0px 20px;
+    display: grid;
+  }
+  .router_view {
+    margin-left: 300px;
+  }
 }
 </style>

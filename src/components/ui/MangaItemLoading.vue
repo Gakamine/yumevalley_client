@@ -1,17 +1,11 @@
 <template>
     <div class="MangaItem">
-      <router-link :to="'media/' + creation_data.url">
-        <div class="MangaItem__cover">
-          <img :src="creation_data.coverUrl"/>
-        </div>
-        <div class="MangaItem__name">{{ creation_data.title }}</div>
-      </router-link>
+        <div class="MangaItem__cover"/>
+      <div class="MangaItem__name">Loading...</div>
       <div class="MangaItem__details">
-        <router-link :to="'/user/'+ creation_data.user.username">
-          <div class="MangaItem__author">{{ creation_data.user.username }}</div>
-        </router-link>
+        <div class="MangaItem__author">Loading...</div>
         <div class="MangaItem__views">
-          12.4K
+          Loading...
           <EyeIcon/>
         </div>
       </div>
@@ -23,7 +17,6 @@ import { EyeIcon } from "vue-feather-icons";
 
 export default {
   components: { EyeIcon },
-  props: ['creation_data']
 };
 </script>
 
