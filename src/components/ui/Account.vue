@@ -10,7 +10,7 @@
             }" class="dropdown-acc">
                 <router-link v-on:click="showDropdown = false" class="drop-item" to="/auth/signin">Login</router-link>
                 <router-link v-on:click="showDropdown = false" class="drop-item" to="/auth/signup">Register</router-link>
-                <switches class="drop-item" style="float:right" label="Darkmode" v-model="darkmode"></switches>
+                <switches class="drop-item drop-item-last" style="float:right" label="Darkmode" v-model="darkmode"></switches>
             </div>
         </transition>
     </section>
@@ -78,7 +78,6 @@ export default {
     right: 10px;
     position: absolute;
     box-shadow: 5px 5px 15px rgba(0,0,0,.1);
-    overflow: hidden;
 }
 
 .drop-item {
@@ -87,6 +86,10 @@ export default {
     font-size: 12px;
     display: block;
     border-bottom: 1px solid #e5e5e5;
+}
+
+.drop-item-last {
+    border: none !important;
 }
 .fade-enter-active, .fade-leave-active {
       transition: all 0.2s;
