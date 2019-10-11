@@ -8,9 +8,9 @@
             handler: 'onClose',
             exclude: ['account-container']
             }" class="dropdown-acc">
-                <router-link  v-on:click="showDropdown = false" class="drop-item" to="/auth/signin">Login</router-link>
-                <router-link   v-on:click="showDropdown = false" class="drop-item" to="/auth/signup">Register</router-link>
-                <switches  class="drop-item" style="float:right" label="Darkmode" v-model="darkmode"></switches>
+                <router-link v-on:click="showDropdown = false" class="drop-item" to="/auth/signin">Login</router-link>
+                <router-link v-on:click="showDropdown = false" class="drop-item" to="/auth/signup">Register</router-link>
+                <switches class="drop-item" style="float:right" label="Darkmode" v-model="darkmode"></switches>
             </div>
         </transition>
     </section>
@@ -19,6 +19,7 @@
 <script>
 import { UserIcon } from "vue-feather-icons";
 import Switches from 'vue-switches';
+
 export default {
     components: {
         UserIcon,
@@ -34,8 +35,27 @@ export default {
         onClose () {
           this.showDropdown = false
         }
+    },
+    watch: {
+        darkmode: {
+            handler() {
+                if(this.darkmode==true) {
+                    localStorage.setItem('darkmode', 'darkmode');
+                    document.getElementById("app").classList.add('darkmode');
+                } else {
+                    localStorage.setItem('darkmode', 'lightmode');
+                    document.getElementById("app").classList.remove('darkmode');
+                }
+             }
+        },
+    },
+    mounted() {
+        if(localStorage.darkmode=="darkmode") {
+            this.darkmode=true;
+        }
     }
 }
+
 </script>
 <style>
 .account-container {
@@ -87,5 +107,8 @@ export default {
 }
 .vue-switcher__label:hover {
     color: black;
+}
+.vue-switcher {
+    margin-bottom: 0px !important;
 }
 </style>
