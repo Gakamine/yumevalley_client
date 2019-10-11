@@ -1,7 +1,7 @@
 <template>
   <nav class="NavBar">
     <div class="nav-items">
-      <router-link to="./">
+      <router-link to="/">
         <logo></logo>
       </router-link>
     </div>
@@ -31,7 +31,7 @@ export default {
 .NavBar {
   height: 64px;
   border-bottom: 1px solid #eee;
-  padding: 0 30px;
+  padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

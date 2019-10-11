@@ -1,0 +1,75 @@
+.darkmode * {
+  color: #e8e6e3 !important;
+}
+
+.darkmode .SideMenuItem:hover {
+    background-color: #1f2024 !important;;
+}
+
+.darkmode .SideMenuItem {
+  color: #e8e6e3; 
+}
+
+.darkmode {
+  background-color: #181a1b;
+  color: #e8e6e3;
+}
+
+.darkmode .router-link-active .SideMenuItem {
+    background-color:  #1f2024;
+}
+
+.darkmode nav {
+  background-color: #181a1b;
+}
+
+.darkmode .SearchBar, .darkmode .SearchBar input {
+  background: #1a1c1d !important;
+  color: #e8e6e3 !important;
+}
+
+.darkmode .NavBar {
+  border-color: #363636;
+  background-color: #1f2024;
+}
+
+.darkmode .MangaItem__cover {
+  background-image: linear-gradient(-128deg, #400131 0%, #2c2e31 100%) !important;
+}
+
+.darkmode .MangaItem__name,.darkmode .MangaItem__details {
+  color: #e8e6e3 !important;
+}
+
+.darkmode .account-container {
+  background-color: #1a1c1d !important;
+}
+
+.darkmode .dropdown-acc {
+  background-color: #1a1c1d !important;
+  border-color: #2e2f30 !important;
+}
+
+.darkmode .drop-item {
+  border-color: #2e2f30 !important;
+}
+
+.darkmode a:hover,.darkmode  .vue-switcher span:hover,.darkmode  a:hover p{
+  color: rgba(255, 255, 255, 0.712) !important;
+}
+
+.darkmode .input-text,.darkmode  .checkmark {
+  background-color: rgba(68, 73, 75, 0.506) !important;
+}
+
+.darkmode .input-checkbox:hover input ~ .checkmark {
+  background-color: #2e3233 !important;
+}
+.darkmode .input-checkbox .checkmark:after {
+  border-color: #e8e6e3 !important;
+}
+
+.darkmode .input-btn {
+  background-color: rgb(46, 46, 46) !important;
+  border-color: transparent !important;
+}

@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <NavBar/>
-    <div class="layout">
-      <SideMenu/>
-      <div class="router_view">
-        <router-view></router-view>
+    <div id="app" v-bind:class='isDarkmode'>
+      <NavBar/>
+      <div class="layout">
+        <SideMenu/>
+        <div class="router_view">
+          <router-view></router-view>
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 import NavBar from "./components/ui/NavBar.vue";
 import SideMenu from "./components/ui/SideMenu.vue";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+import './assets/css/darkmode.css';
 
 export default {
   components: {
     NavBar,
     SideMenu
+  },
+  data() {
+    return {
+      isDarkmode: localStorage.getItem('darkmode')
+    }
   }
 };
 </script>
 
 <style>
+@import './assets/css/forms.css';
+
 * {
   outline: none;
 }
@@ -33,9 +43,18 @@ body {
 }
 #app {
   margin: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
 }
 a {
   text-decoration: none !important;
+  color: #737373;
+}
+a:hover {
+    color: black;
 }
 @media screen and (max-width: 1024px) {
   .layout {

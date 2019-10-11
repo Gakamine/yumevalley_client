@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import 'bootstrap'
+import BootstrapVue from 'bootstrap-vue'
+import VueClosable from 'vue-closable'
 import VueRouter from 'vue-router'
 import 'tachyons'
 import { ApolloClient } from 'apollo-client'
@@ -9,6 +11,8 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
+Vue.use(BootstrapVue)
+Vue.use(VueClosable)
 
 const router = new VueRouter({
   mode: 'history',
@@ -19,8 +23,17 @@ const router = new VueRouter({
     path: '*',
     component: require('./components/pages/404.vue').default
   }, {
-    path: '/media/:slug',
+    path: '/media/:url',
     component: require('./components/pages/media.vue').default
+  }, {
+    path: '/auth/signin',
+    component: require('./components/pages/login.vue').default
+  }, {
+    path: '/auth/signup',
+    component: require('./components/pages/register.vue').default
+  }, {
+    path: '/terms',
+    component: require('./components/pages/terms.vue').default
   }]
 })
 
