@@ -25,12 +25,17 @@ const router = new VueRouter({
   }, {
     path: '/media/:url',
     component: require('./components/pages/media.vue').default
-  }, {
+  },
+  // AUTH PAGES
+  {
     path: '/auth/signin',
-    component: require('./components/pages/login.vue').default
+    component: require('./components/pages/auth/login.vue').default
   }, {
     path: '/auth/signup',
-    component: require('./components/pages/register.vue').default
+    component: require('./components/pages/auth/register.vue').default
+  }, {
+    path: '/auth/lost-password',
+    component: require('./components/pages/auth/lostpassword.vue').default
   }, {
     path: '/terms',
     component: require('./components/pages/terms.vue').default

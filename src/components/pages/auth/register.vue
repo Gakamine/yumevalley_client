@@ -19,7 +19,7 @@
     </section>
 </template>
 <script>
-import { USER_REGISTER_MUTATION } from '../../graphql/register_user'
+import { USER_REGISTER_MUTATION } from '../../../graphql/register_user'
 
 export default {
  data () {

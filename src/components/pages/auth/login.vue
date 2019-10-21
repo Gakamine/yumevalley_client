@@ -5,6 +5,9 @@
             <input class="input-text" type="email" placeholder="Enter your email" required/>
             <input class="input-text" type="password" placeholder="Enter your password" required/>
             <input class="input-btn" type="submit" value="Login"/>
+            <router-link to="/auth/lost-password">
+                <p>You lost your password ?</p>
+            </router-link>
             <router-link to="/auth/signup">
                 <p>...or register instead.</p>
             </router-link>
