@@ -1,8 +1,5 @@
 <template>
     <div id="app" v-bind:class='isDarkmode'>
-      <block v-bind:class='isDarkmode'>
-            <meta name="theme-color" content="#3b3e42">
-      </block>
       <NavBar/>
       <div class="layout">
         <SideMenu/>
