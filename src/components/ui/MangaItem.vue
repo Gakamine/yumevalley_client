@@ -35,6 +35,7 @@ export default {
   }
   .MangaItem__details {
     font-size: 14px;
+    width: 185px;
   }
   .MangaItem {
     margin-right: 42px;

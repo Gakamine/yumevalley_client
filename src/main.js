@@ -43,7 +43,7 @@ const router = new VueRouter({
 })
 
 const httpLink = new HttpLink({
-  uri: 'https://yumevalley-api.herokuapp.com/graphql',
+  uri: 'http://yumevalley-api.herokuapp.com/',
   fetchOptions: { method: "POST" },
 })
 
