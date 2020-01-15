@@ -59,7 +59,7 @@ export default {
 <style>
 .account-container {
     float: right;
-    background-color: #f5f5f5;
+    background-color: #f1f1f1;
     padding: 5px;
     border-radius: 100%;
     cursor: pointer;

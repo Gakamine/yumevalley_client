@@ -10,6 +10,10 @@ export const GET_CREATION_QUERY = gql`
                 id
                 username
             }
+            tags {
+                id
+                tagname
+            }
         }
         chapter(creationUrl: "jojos-bizarre-adventure",order:"desc",offset:0) {
             id

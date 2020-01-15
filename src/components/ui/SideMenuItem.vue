@@ -28,8 +28,8 @@ export default {
   .SideMenuItem {
     align-items: center;
     display: block;
-    padding: 0 20px;
-    font-size: 20px;
+    padding: 7.25px 20px 7.25px 20px;
+    font-size: 0;
     cursor: pointer;
     text-align: center;
     height: 100%;
@@ -38,11 +38,12 @@ export default {
   .SideMenuItem svg {
     margin: 0 !important;
     width: 100%;
+    height: 30px;
   }
 }
 
 .SideMenuItem:hover {
-  background-color: #f9f9f9;
+  background-color: #f1f1f1;
 }
 svg {
   margin-right: 20px;

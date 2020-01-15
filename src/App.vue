@@ -33,9 +33,6 @@ export default {
 <style>
 @import './assets/css/forms.css';
 
-* {
-  outline: none;
-}
 body {
   color: #333;
   margin: 0;
@@ -64,7 +61,8 @@ a:hover {
     grid-gap: 60px;
   }
   .router_view {
-    padding: 0px 20px 0px 20px;
+    padding: 0px 5px 0px 5px;
+    margin-bottom: 50px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -73,7 +71,7 @@ a:hover {
     display: grid;
   }
   .router_view {
-    margin-left: 300px;
+    margin-left: 250px;
   }
 }
 </style>

@@ -26,13 +26,13 @@ export default {
   display: flex;
   align-items: center;
   position: relative;
-  background: #f9f9f9;
+  background: #f1f1f1;
   border-radius: 6px;
 }
 .SearchBar__input {
   border: none;
   border-radius: 6px;
-  background: #f9f9f9;
+  background: #f1f1f1;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -44,6 +44,6 @@ export default {
 .SearchBar svg {
   margin-right: 5px;
   margin-left: 5px;
-  color: #cecece;
+  color: #858585;
 }
 </style>

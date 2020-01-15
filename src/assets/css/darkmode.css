@@ -85,3 +85,12 @@
 .darkmode #media-description {
   background-color: #1f2024;
 }
+
+.darkmode .tags {
+  background-color:#161616;
+  color: #e8e6e3;
+}
+
+.darkmode .tags:hover {
+  background-color: #2e2e2e;
+}

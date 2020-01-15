@@ -1,5 +1,5 @@
 <template>
-  <div class="SideMenu" :class="{ 'sidemenu--hidden': !showSidemenu }">
+  <div class="SideMenu">
     <router-link to="/" exact>
       <SideMenuItem name="Home">
         <HomeIcon/>
@@ -12,7 +12,7 @@
     </router-link>
     <router-link to="/following">
       <SideMenuItem name="Following">
-        <ListIcon/>
+        <BookmarkIcon/>
       </SideMenuItem>
     </router-link>
     <router-link to="/translate">
@@ -32,7 +32,7 @@
 import {
   HomeIcon,
   CompassIcon,
-  ListIcon,
+  BookmarkIcon,
   FlagIcon,
   UserIcon
 } from "vue-feather-icons";
@@ -43,44 +43,9 @@ export default {
     SideMenuItem,
     HomeIcon,
     CompassIcon,
-    ListIcon,
+    BookmarkIcon,
     FlagIcon,
     UserIcon
-  },
-  data() {
-    return {
-      showSidemenu: true,
-      lastScrollPosition: 0
-    }
-  },
-  mounted () {
-    window.addEventListener('scroll', this.onScroll)
-  },
-  beforeDestroy () {
-    window.removeEventListener('scroll', this.onScroll)
-  },
-  methods: {
-    onScroll () {
-      // Get the current scroll position
-      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop    // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
-      if (currentScrollPosition < 0) {
-        return
-      }    // Here we determine whether we need to show or hide the navbar
-      this.showSidemenu = currentScrollPosition < this.lastScrollPosition    // Set the current scroll position as the last scroll position
-      this.lastScrollPosition = currentScrollPosition
-    }
-  },
-  onScroll () {
-    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-    if (currentScrollPosition < 0) {
-      return
-    }  // Stop executing this function if the difference between
-    // current scroll position and last scroll position is less than some offset
-    if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-      return
-    }
-    this.showSidemenu = currentScrollPosition < this.lastScrollPosition
-    this.lastScrollPosition = currentScrollPosition
   }
 };
 </script>
@@ -105,16 +70,11 @@ export default {
     background-color: white;
     z-index: 1;
     border-top: 1px solid #eee;
-    min-height: 60px;
-    transition: 0.1s all ease-out;
+    min-height: 40px;
   }
 
   .SideMenu a:nth-child(4),.SideMenu a:nth-child(5) {
     display: none;
-  }
-
-  .SideMenu.sidemenu--hidden {
-    transform: translate3d(0, 100%, 0);
   }
 }
 
@@ -124,6 +84,6 @@ export default {
 }
 
 .router-link-active .SideMenuItem {
-    background-color: #f9f9f9;
+    background-color: #f1f1f1;
 }
 </style>
