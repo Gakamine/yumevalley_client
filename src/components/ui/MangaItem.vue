@@ -1,6 +1,6 @@
 <template>
     <div class="MangaItem">
-      <router-link :to="'media/' + creation_data.url">
+      <router-link class="creation-link" :to="'media/' + creation_data.url">
         <div class="MangaItem__cover">
           <img :src="creation_data.coverUrl"/>
         </div>
@@ -98,5 +98,12 @@ export default {
 .MangaItem__author, .MangaItem__details, .MangaItem__name {
   text-decoration: none;
   color: #444;
+}
+.MangaItem .creation-link {
+  outline: none;
+}
+.MangaItem a:focus > .MangaItem__cover {
+  transform: scale(1.01) translateY(-1px);
+  box-shadow: 14px 4px 14px 0 rgba(0, 0, 0, 0.03);
 }
 </style>

@@ -1,9 +1,7 @@
 <template>
   <nav class="NavBar" :class="{ 'navbar--hidden': !showNavbar }">
     <div class="nav-items">
-      <router-link to="/">
-        <logo></logo>
-      </router-link>
+      <logo></logo>
     </div>
     <SearchBar/>
     <div class="nav-items">

@@ -10,7 +10,7 @@
 
 }
 
-.darkmode .SideMenuItem:hover {
+.darkmode .SideMenuItem:hover, .darkmode .SideMenu a:focus > .SideMenuItem {
   background-color: #1f2024 !important;
 }
 

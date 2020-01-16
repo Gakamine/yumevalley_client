@@ -81,9 +81,14 @@ export default {
 .SideMenu a {
   text-decoration: none;
   color: black;
+  outline: none;
 }
 
 .router-link-active .SideMenuItem {
     background-color: #f1f1f1;
+}
+
+.SideMenuItem:hover, .SideMenu a:focus > .SideMenuItem {
+  background-color: #f1f1f1 !important;
 }
 </style>

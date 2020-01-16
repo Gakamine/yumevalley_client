@@ -42,9 +42,6 @@ export default {
   }
 }
 
-.SideMenuItem:hover {
-  background-color: #f1f1f1;
-}
 svg {
   margin-right: 20px;
 }
