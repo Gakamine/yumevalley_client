@@ -41,11 +41,11 @@
   background-color: #1f2024;
 }
 
-.darkmode .MangaItem__cover {
+.darkmode .CreationItem__cover {
   background-image: linear-gradient(-128deg, #400131 0%, #2c2e31 100%) !important;
 }
 
-.darkmode .MangaItem__name,.darkmode .MangaItem__details {
+.darkmode .CreationItem__name,.darkmode .CreationItem__details {
   color: #e8e6e3 !important;
 }
 

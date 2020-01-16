@@ -1,17 +1,11 @@
 <template>
-    <div class="MangaItem">
-      <router-link class="creation-link" :to="'media/' + creation_data.url">
-        <div class="MangaItem__cover">
-          <img :src="creation_data.coverUrl"/>
-        </div>
-        <div class="MangaItem__name">{{ creation_data.title }}</div>
-      </router-link>
-      <div class="MangaItem__details">
-        <router-link :to="'/user/'+ creation_data.user.username">
-          <div class="MangaItem__author">{{ creation_data.user.username }}</div>
-        </router-link>
-        <div class="MangaItem__views">
-          12.4K
+    <div class="CreationItem">
+        <div class="CreationItem__cover"/>
+      <div class="CreationItem__name">Loading...</div>
+      <div class="CreationItem__details">
+        <div class="CreationItem__author">Loading...</div>
+        <div class="CreationItem__views">
+          Loading...
           <EyeIcon/>
         </div>
       </div>
@@ -23,36 +17,43 @@ import { EyeIcon } from "vue-feather-icons";
 
 export default {
   components: { EyeIcon },
-  props: ['creation_data']
 };
 </script>
 
+<script>
+import { EyeIcon } from "vue-feather-icons";
+
+export default {
+  components: { EyeIcon },
+  props: ['creation_data']
+};
+</script>
 <style scoped>
 @media screen and (min-width: 1024px) {
-  .MangaItem__details {
+  .CreationItem__details {
     font-size: 14px;
     width: 185px;
   }
-  .MangaItem {
+  .CreationItem {
     margin-right: 42px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .MangaItem__details {
+  .CreationItem__details {
     font-size: 10px;
   }
-  .MangaItem {
+  .CreationItem {
     margin-right: 4px;
     margin-left: 4px;
   }
-  .MangaItem__name {
+  .CreationItem__name {
     font-size: 10px;
   }
 }
-.MangaItem {
+.CreationItem {
   margin-bottom: 10px;
 }
-.MangaItem__cover {
+.CreationItem__cover {
   background-image: linear-gradient(-128deg, #b9e4fb 0%, #ffe7f9 100%);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.03);
   border-radius: 8px;
@@ -61,49 +62,42 @@ export default {
   overflow: hidden;
   position: relative;
 }
-.MangaItem__cover:after {
+.CreationItem__cover:after {
   padding-top: 140%;
   display: block;
   content: '';
 }
-.MangaItem__cover:hover {
+.CreationItem__cover:hover {
   transform: scale(1.01) translateY(-1px);
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.06);
 }
-.MangaItem__cover:active {
+.CreationItem__cover:active {
   transform: none;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.03);
 }
-.MangaItem__cover img {
+.CreationItem__cover img {
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.MangaItem__details {
+.CreationItem__details {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #666666;
 }
-.MangaItem__views {
+.CreationItem__views {
   display: flex;
   align-items: center;
 }
-.MangaItem__views svg {
+.CreationItem__views svg {
   margin-left: 6px;
   height: 16px;
   width: 16px;
 }
-.MangaItem__author, .MangaItem__details, .MangaItem__name {
+.CreationItem__author {
   text-decoration: none;
   color: #444;
-}
-.MangaItem .creation-link {
-  outline: none;
-}
-.MangaItem a:focus > .MangaItem__cover {
-  transform: scale(1.01) translateY(-1px);
-  box-shadow: 14px 4px 14px 0 rgba(0, 0, 0, 0.03);
 }
 </style>

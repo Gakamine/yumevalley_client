@@ -1,39 +1,39 @@
 <template>
     <div class="list-section">
         <HomeSection title="Popular">
-          <MangaItemLoading v-if="loading"  />
-          <MangaItemLoading v-if="loading"  />
-          <MangaItemLoading v-if="loading"  />
-          <MangaItemLoading v-if="loading"  />
-          <MangaItem v-for="Creation in creation"
+          <CreationItemLoading v-if="loading"  />
+          <CreationItemLoading v-if="loading"  />
+          <CreationItemLoading v-if="loading"  />
+          <CreationItemLoading v-if="loading"  />
+          <CreationItem v-for="Creation in creation"
               :key="Creation.id"
               :creation_data="Creation">
-          </MangaItem>
+          </CreationItem>
         </HomeSection>
         <HomeSection title="Recommended">
-          <MangaItemLoading v-if="loading"  />
-          <MangaItemLoading v-if="loading"  />
-          <MangaItemLoading v-if="loading"  />
-          <MangaItemLoading v-if="loading"  />
-          <MangaItem v-for="Creation in creation"
+          <CreationItemLoading v-if="loading"  />
+          <CreationItemLoading v-if="loading"  />
+          <CreationItemLoading v-if="loading"  />
+          <CreationItemLoading v-if="loading"  />
+          <CreationItem v-for="Creation in creation"
               :key="Creation.id"
               :creation_data="Creation">
-          </MangaItem>
+          </CreationItem>
         </HomeSection>
       </div>
 </template>
 
 <script>
 import HomeSection from "../ui/HomeSection.vue";
-import MangaItem from "../ui/MangaItem.vue";
-import MangaItemLoading from "../ui/lazy-components/MangaItemLoading.vue";
+import CreationItem from "../ui/CreationItem.vue";
+import CreationItemLoading from "../ui/lazy-components/CreationItemLoading.vue";
 import { ALL_CREATIONS_QUERY } from '../../graphql/fetch_creations'
 
 export default {
   components: {
       HomeSection,
-      MangaItem,
-      MangaItemLoading
+      CreationItem,
+      CreationItemLoading
   },
   data () {
     return {
