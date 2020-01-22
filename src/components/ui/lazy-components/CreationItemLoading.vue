@@ -11,21 +11,10 @@
       </div>
     </div>
 </template>
-
 <script>
 import { EyeIcon } from "vue-feather-icons";
-
 export default {
-  components: { EyeIcon },
-};
-</script>
-
-<script>
-import { EyeIcon } from "vue-feather-icons";
-
-export default {
-  components: { EyeIcon },
-  props: ['creation_data']
+  components: { EyeIcon }
 };
 </script>
 <style scoped>

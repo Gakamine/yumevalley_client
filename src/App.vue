@@ -1,5 +1,6 @@
 <template>
-    <div id="app" v-bind:class='isDarkmode'>
+  <div id="app" v-bind:class='isDarkmode'>
+    <div v-if="!APIerror">
       <NavBar/>
       <div class="layout">
         <SideMenu/>
@@ -8,24 +9,45 @@
         </div>
       </div>
     </div>
+    <div v-else>
+      <ErrorComponent/>
+    </div>
+  </div>
 </template>
 
 <script>
 import NavBar from "./components/ui/NavBar.vue";
 import SideMenu from "./components/ui/SideMenu.vue";
+import ErrorComponent from './components/ui/APIerror.vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import './assets/css/darkmode.css';
+import { ALL_CREATIONS_QUERY } from './graphql/fetch_creations';
 
 export default {
   components: {
     NavBar,
-    SideMenu
+    SideMenu,
+    ErrorComponent
   },
   data() {
     return {
-      isDarkmode: localStorage.getItem('darkmode')
+      isDarkmode: localStorage.getItem('darkmode'),
+      APIerror: false
     }
+  },
+  apollo: {
+    creation: {
+      query: ALL_CREATIONS_QUERY,
+      variables () {
+        return {
+          url: this.url
+        }
+      },
+      error() {
+        this.APIerror=true
+      }
+    },
   }
 };
 </script>
@@ -51,7 +73,7 @@ a {
   color: #737373;
 }
 a:hover {
-    color: black;
+    color: rgb(53, 53, 53);
 }
 @media screen and (max-width: 1024px) {
   .layout {
@@ -61,8 +83,7 @@ a:hover {
     grid-gap: 60px;
   }
   .router_view {
-    padding: 0px 5px 0px 5px;
-    margin-bottom: 50px;
+    padding: 10px 5px 50px 5px;
   }
 }
 @media screen and (min-width: 1024px) {

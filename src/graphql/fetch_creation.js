@@ -15,7 +15,7 @@ export const GET_CREATION_QUERY = gql`
                 tagname
             }
         }
-        chapter(creationUrl: "jojos-bizarre-adventure",order:"desc",offset:0) {
+        chapter(creationUrl: $url,order:"desc",offset:0) {
             id
             title
             coverUrl
