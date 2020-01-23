@@ -16,7 +16,7 @@
     "bootstrap-vue": "^2.0.3",
     "buefy": "^0.8.9",
     "core-js": "^3.6.4",
-    "graphql": "^14.5.7",
+    "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
     "jquery": "^3.4.1",
     "tachyons": "^4.11.1",
