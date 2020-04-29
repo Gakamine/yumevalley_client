@@ -18,7 +18,7 @@
     "core-js": "^3.6.4",
     "graphql": "^14.5.7",
     "graphql-tag": "^2.10.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "tachyons": "^4.11.1",
     "vue": "^2.6.11",
     "vue-apollo": "^3.0.2",
