@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-bind:class='isDarkmode'>
-    <div v-if="!APIerror">
+    <div v-if="APIerror">
       <NavBar/>
       <div class="layout">
         <SideMenu/>
